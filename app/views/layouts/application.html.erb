@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyBlog</title>
+    <title>Nic Travis Codes</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,29 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="wrapper">
+      <div class="sidebar box">
+        <div class="logo-d iv"><a href="/"><%= image_tag 'me.jpeg', class: 'logo'%></a></div>
+        <div class="about-div">
+          <h2>About</h2>
+          <p>I am freelance web developer, currently living in sunny Bangkok, TH. I focus on Rails, React, Redux, and other things that begin with R. I also do music stuff. <%= link_to 'more', '/about' %> </p>
+          <p>Thank you for visiting.</p>
+        </div>
+      </div>
+
+      <div class="content box">
+        <%= yield %>
+      </div>
+
+      <div class="footer box">
+        &copy Nic Travis Codes
+      </div>
+
+    </div>
+
+  <div class="side-text">
+    <span>Nic Travis Codes</span>
+  </div>
+
   </body>
 </html>
