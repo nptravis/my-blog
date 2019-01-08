@@ -15,7 +15,7 @@
         <div class="logo-d iv"><a href="/"><%= image_tag 'me.jpeg', class: 'logo'%></a></div>
         <div class="about-div">
           <h2>About</h2>
-          <p>I am freelance web developer, currently living in sunny Bangkok, TH. I focus on Rails, React, Redux, and other things that begin with R. I also do music stuff. <%= link_to 'more', '/about' %> </p>
+          <p>I am freelance web developer, currently living in sunny Bangkok, TH. I focus on Rails, React, Redux, and other things that begin with R. I also do music stuff. <%= link_to 'more', about_path %> </p>
           <p>Thank you for visiting.</p>
         </div>
       </div>
@@ -25,13 +25,14 @@
       </div>
 
       <div class="footer box">
-        &copy Nic Travis Codes
+          <%= link_to '<- Newer', root_path %>
+          <%= link_to 'Older ->', posts_path %>
       </div>
 
     </div>
 
   <div class="side-text">
-    <span>Nic Travis Codes</span>
+    <span>&copy Nic Travis Codes</span>
   </div>
 
   </body>

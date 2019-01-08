@@ -1,19 +1,46 @@
 body {
 	padding: 0;
-	margin: 50px;
+	margin: 20px;
 }
 
+
+
 div.wrapper {
-	width: calc(100vw - 100px);
-	height: calc(100vh - 100px);
-	display: grid;
-	grid-template-areas:
-	"sidebar content content"
-	"sidebar footer footer";
-	grid-template-columns: 200px 1fr;
-	grid-template-rows: 1fr 50px;
-	grid-gap: 10px;
 	
+	grid-template-areas:
+	"sidebar"
+	"content"
+	"footer";
+	grid-gap: 10px;
+}
+
+img.logo {
+		height: 100px;
+		-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+	}
+
+
+@media only screen and (min-width: 500px)  {
+	div.wrapper {
+		width: calc(100vw - 40px);
+		height: calc(100vh - 40px);
+		display: grid;
+		grid-template-areas:
+		"sidebar content content"
+		"sidebar footer footer";
+		grid-template-columns: 200px 1fr;
+		grid-template-rows: 1fr 50px;
+		grid-gap: 10px;
+		
+	}
+
+	img.logo {
+		-webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+		clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+		height: 200px;
+	}
 }
 
 div.side-text {
@@ -25,7 +52,7 @@ div.sidebar {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-
+	border: 1px solid black;
 	div.logo-div {
 		flex: 1;
 	}
@@ -46,31 +73,26 @@ div.sidebar:nth-child(2) {
 div.content {
 	grid-area: content;
 	height: 100%;
+	border: 1px solid black;
 
 }
 
 div.footer {
 	grid-area: footer;
 	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid black;
 }
 
 div.side-text span {
   position: fixed;
   top: 205px;
-  left: -30px;
+  left: -50px;
   transform: rotate(-90deg);
 }
 
-img.logo {
-	/*Chevrom right*/
-/*	-webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-	clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);*/
 
-	/*Triangle*/
-	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-	height: 200px;
-}
 
 .box {
 	border-radius: 10px;

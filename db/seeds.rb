@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+post = Post.new
+
+post.title = "React Redux Final Project"
+post.description = "This is my final blog post as student of Flatiron School"
+
+post.content = "This should be markdown"
+
+post.save
