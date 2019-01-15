@@ -8,6 +8,7 @@ div.posts-wrapper {
 	grid-template-rows: repeat(4, 19vh);
 	grid-gap: 10px;
 	padding: 20px;
+	overflow: auto;
 
 	
 	div:nth-child(1) {

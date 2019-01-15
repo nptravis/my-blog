@@ -4,18 +4,21 @@
 		<% if index == 0 %>
 			<div class="big-post post-box">
 				<h2><%= link_to post.title, post_path(post) %></h2>
+				<span class='post-date'><%= Date.parse(post.created_at.to_s).strftime('%B %d, %Y')  %></span>
 				<p><%= post.description %></p>
 				<%= @markdown.render(post.content).html_safe %>
 			</div>
 		<% elsif index > 0 || index < 3%>
 			<div class="mid-post post-box">
 				<h2><%= link_to post.title, post_path(post) %></h2>
+				<span class='post-date'><%= Date.parse(post.created_at.to_s).strftime('%B %d, %Y')  %></span>
 				<p><%= post.description %></p>
 				<%= @markdown.render(post.content).html_safe %>
 			</div>
 		<% else %>
 			<div class="small-post post-box">
 				<h2><%= link_to post.title, post_path(post) %></h2>
+				<span class='post-date'><%= Date.parse(post.created_at.to_s).strftime('%B %d, %Y')  %></span>
 				<p><%= post.description %></p>
 				<%= @markdown.render(post.content).html_safe %>
 			</div>

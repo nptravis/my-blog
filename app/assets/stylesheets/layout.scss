@@ -28,7 +28,6 @@ img.logo {
 	div.wrapper {
 		width: calc(100vw - 40px);
 		height: calc(100vh - 40px);
-		max-height: 100px;
 		display: grid;
 		grid-template-areas:
 		"sidebar content content"

@@ -1,5 +1,7 @@
+<% if current_user %>
 <%= link_to 'Edit', edit_post_path(@post) %>
 <%= button_to "delete", post_path(@post), method: 'delete' %>
+<% end %>
 <h1><%= @post.title %></h1>
 <h2><%= @post.description %></h2>
 <%= @markdown.render(@post.content).html_safe %>
