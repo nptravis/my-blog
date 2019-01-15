@@ -18,7 +18,12 @@
           <p>I am freelance web developer, currently living in sunny Bangkok, TH. I focus on Ruby, Rails, React, Redux, and other things that begin with R. I also do music stuff. <%= link_to 'more', about_path %> </p>
           <p>Thank you for visiting.</p>
         </div>
-        <%= link_to "Create", new_post_path %>
+        <% if current_user %>
+          <%= link_to "Create", new_post_path %>
+          <%= link_to "Log out", logout_path %>
+        <% else %>
+          <%= link_to "Are you me?", login_path %>
+        <% end %>
       </div>
 
       <div class="content box">

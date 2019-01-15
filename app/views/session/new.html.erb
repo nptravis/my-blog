@@ -1,0 +1,15 @@
+<h1>Prove it</h1>
+
+<% if flash[:message].present? %>
+	<ul class="errors">
+		<li><%= flash[:message] %></li>
+	</ul>
+<% end %>
+
+<%= form_for @user, url: session_create_path do |f| %>
+	<p>Username</p>
+	<p><%= f.text_field :username %></p>
+	<p>Password</p>
+	<p><%= f.password_field :password %></p>
+	<p><%= f.submit "Log In" %></p>
+<% end %>
