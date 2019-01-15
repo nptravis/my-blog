@@ -15,9 +15,10 @@
         <div class="logo-d iv"><a href="/"><%= image_tag 'me.jpeg', class: 'logo'%></a></div>
         <div class="about-div">
           <h2>About</h2>
-          <p>I am freelance web developer, currently living in sunny Bangkok, TH. I focus on Rails, React, Redux, and other things that begin with R. I also do music stuff. <%= link_to 'more', about_path %> </p>
+          <p>I am freelance web developer, currently living in sunny Bangkok, TH. I focus on Ruby, Rails, React, Redux, and other things that begin with R. I also do music stuff. <%= link_to 'more', about_path %> </p>
           <p>Thank you for visiting.</p>
         </div>
+        <%= link_to "Create", new_post_path %>
       </div>
 
       <div class="content box">

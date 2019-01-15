@@ -1,6 +1,8 @@
 body {
 	padding: 0;
 	margin: 20px;
+	height: 100vh;
+	width: 100vw;
 }
 
 
@@ -11,7 +13,8 @@ div.wrapper {
 	"sidebar"
 	"content"
 	"footer";
-	grid-gap: 10px;
+	grid-gap: 1em;
+	
 }
 
 img.logo {
